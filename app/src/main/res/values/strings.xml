@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="Home">خانه</string>
+    <string name="search_in_news">جستجو در اخبار</string>
+</resources>

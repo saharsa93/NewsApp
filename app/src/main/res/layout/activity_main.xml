@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/vazir_bold"
+            android:includeFontPadding="false"
+            android:text="@string/Home"
+            android:textColor="@color/colorTitle"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:textAlignment="center"/>
+
+        <ImageButton
+            android:id="@+id/reload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:src="@drawable/ic_reload"
+            android:background="@color/colorWhite"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/title_lay"
+        android:background="@drawable/background_search"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_search"
+            app:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:fontFamily="@font/vazir_light"
+            android:hint="@string/search_in_news"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorTextHint"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/layoutSearch"/>
+
+</RelativeLayout>
